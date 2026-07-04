@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+*.so
+
+# ROS build/install artifacts
+build
+log
+install
+.vscode
+.env
+.DS_Store
+go2_robot_sdk/.coverage
+go2_robot_sdk/coverage.xml
+
+# Runtime logs / dữ liệu sinh ra
+vla_logs/
+navila/result/
+*.log
+*.ply
+*.pgm
+*.pcd
+
+# Checkpoint / trọng số lớn (tải lại bằng script; KHÔNG đẩy lên git)
+navila-ckpt/
+*.safetensors
+*.pth
+
+.superpowers/
+docs/

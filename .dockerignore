@@ -1,0 +1,30 @@
+# colcon workspace artifacts (rebuilt inside the image)
+build/
+install/
+log/
+
+# git
+.git/
+.gitignore
+
+# python
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# runtime output, not source
+vla_logs/
+navila/result/
+
+# heavy weights (fetched separately, not committed) — small in-repo YOLO
+# weights under vlm/ are intentionally NOT excluded here, they ship with the image.
+navila-ckpt/
+*.safetensors
+*.pth
+
+# editor / misc
+.vscode/
+.DS_Store
+.superpowers/
+docs/

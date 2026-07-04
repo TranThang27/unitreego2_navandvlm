@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>go2_navigation</name>
+  <version>1.0.0</version>
+  <description>System bringup for Go2: LiDAR processing (C++/PCL) + launch/config/map for driver bringup, navigation and mapping</description>
+  
+  <maintainer email="abizov94@gmail.com">brimo</maintainer>
+  <license>BSD-3-Clause</license>
+  
+  <author email="abizov94@gmail.com">brimo</author>
+  
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <!-- Core ROS2 dependencies -->
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  
+  <!-- PCL dependencies for point cloud processing -->
+  <depend>pcl_ros</depend>
+  <depend>pcl_conversions</depend>
+  
+  <!-- Threading and system dependencies -->
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+
+  <!-- Runtime: driver + bringup/navigation/mapping stack -->
+  <exec_depend>go2_robot_sdk</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>twist_mux</exec_depend>
+  <exec_depend>joy</exec_depend>
+  <exec_depend>teleop_twist_joy</exec_depend>
+  <exec_depend>pointcloud_to_laserscan</exec_depend>
+  <exec_depend>navigation2</exec_depend>
+  <exec_depend>nav2_amcl</exec_depend>
+  <exec_depend>nav2_bringup</exec_depend>
+  <exec_depend>nav2_map_server</exec_depend>
+  <exec_depend>nav2_util</exec_depend>
+  <exec_depend>slam_toolbox</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+
+  <!-- Test dependencies -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
