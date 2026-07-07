@@ -127,10 +127,10 @@ controller_server:
       decel_lim_x: -2.0
       decel_lim_y: -2.5
       decel_lim_theta: -2.0
-      vx_samples: 20
+      vx_samples: 40
       vy_samples: 1
       vtheta_samples: 40
-      sim_time: 1.5
+      sim_time: 2.0
       linear_granularity: 0.025
       angular_granularity: 0.025
       transform_tolerance: 0.5
@@ -139,14 +139,14 @@ controller_server:
       short_circuit_trajectory_evaluation: True
       stateful: True
       critics: ["RotateToGoal", "Oscillation", "ObstacleFootprint", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
-      ObstacleFootprint.scale: 4.0
-      PathAlign.scale: 10.0
+      ObstacleFootprint.scale: 0.5
+      PathAlign.scale: 20.0
       PathAlign.forward_point_distance: 0.1
-      GoalAlign.scale: 15.0
+      GoalAlign.scale: 5.0
       GoalAlign.forward_point_distance: 0.1
-      PathDist.scale: 10.0
-      GoalDist.scale: 15.0
-      RotateToGoal.scale: 20.0
+      PathDist.scale: 15.0
+      GoalDist.scale: 5.0
+      RotateToGoal.scale: 10.0
       RotateToGoal.slowing_factor: 5.0
       RotateToGoal.lookahead_time: -1.0
 
@@ -242,7 +242,7 @@ map_server:
     use_sim_time: False
     # Overridden in launch by the "map" launch configuration or provided default value.
     # To use in yaml, remove the default "map" value in the tb3_simulation_launch.py file & provide full path to map below.
-    yaml_filename: "/home/dsc-labs/ros2_vlm/src/go2_navigation/map/cty.yaml"
+    yaml_filename: "/home/dsc-labs/ros2_vlm/src/go2_navigation/map/trua77.yaml"
 
 map_saver:
   ros__parameters:

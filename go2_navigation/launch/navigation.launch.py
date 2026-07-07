@@ -30,7 +30,7 @@ def generate_launch_description():
     conn_mode = "single" if len(robot_ip_list) == 1 and conn_type != "cyclonedds" else "multi"
 
     # `or` thay default arg: xử lý cả khi MAP_FILE được set thành rỗng
-    map_file = os.getenv('MAP_FILE') or os.path.join(pkg_dir, 'map', 'cty.yaml')
+    map_file = os.getenv('MAP_FILE') or os.path.join(pkg_dir, 'map', 'trua77.yaml')
     nav2_params = os.path.join(pkg_dir, 'config', 'nav2_params.yaml')
     rviz_config = 'single_robot_conf.rviz' if conn_mode == 'single' else 'multi_robot_conf.rviz'
     rviz_path = os.path.join(pkg_dir, 'config', rviz_config)

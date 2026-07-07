@@ -300,7 +300,11 @@ class Go2Connection:
                     sdp=peer_answer['sdp'], 
                     type=peer_answer['type']
                 )
-                await self.pc.setRemoteDescription(answer)
+                try:
+                    await self.pc.setRemoteDescription(answer)
+                except Exception as e:
+                    logger.error(f"Failed to set remote description.\nLocal SDP Offer:\n{new_sdp}\n\nRemote SDP Answer:\n{peer_answer['sdp']}")
+                    raise
                 
                 logger.info(f"Successfully established WebRTC connection to robot {self.robot_num}")
                 

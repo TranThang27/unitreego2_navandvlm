@@ -43,6 +43,7 @@ echo "▶ [1/3] Driver robot (camera+odom) → $DRIVER_LOG"
   source /opt/ros/jazzy/setup.bash
   source "$WS/install/setup.bash"
   export DECODE_LIDAR="${DECODE_LIDAR:-false}"
+  export ROBOT_IP="${ROBOT_IP:-}"
   exec ros2 launch go2_navigation bringup.launch.py teleop:=true
 ) >"$DRIVER_LOG" 2>&1 &
 PIDS+=($!)

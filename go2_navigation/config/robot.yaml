@@ -2,6 +2,6 @@
 # ROBOT_IP / CONN_TYPE / ROBOT_TOKEN env vars override these if set.
 # After editing: `colcon build --packages-select go2_navigation`
 #                 (or build with --symlink-install so edits apply without rebuilding).
-robot_ip: ""                 # e.g. "192.168.1.7" (multiple robots: "192.168.1.7,192.168.1.8")
+robot_ip: "192.168.100.8"                 # e.g. "192.168.1.7" (multiple robots: "192.168.1.7,192.168.1.8")
 conn_type: "webrtc"          # webrtc | cyclonedds
-robot_token: ""              # empty for Go2 on direct LAN (STA mode); set only via env/local override, never commit a real token
+robot_token: "af4195d67dd4d585f161f7e0932c2aa8"              # empty for Go2 on direct LAN (STA mode); set only via env/local override, never commit a real token
