@@ -127,10 +127,10 @@ controller_server:
       decel_lim_x: -2.0
       decel_lim_y: -2.5
       decel_lim_theta: -2.0
-      vx_samples: 40
+      vx_samples: 20
       vy_samples: 1
       vtheta_samples: 40
-      sim_time: 2.0
+      sim_time: 1.5
       linear_granularity: 0.025
       angular_granularity: 0.025
       transform_tolerance: 0.5
@@ -139,14 +139,14 @@ controller_server:
       short_circuit_trajectory_evaluation: True
       stateful: True
       critics: ["RotateToGoal", "Oscillation", "ObstacleFootprint", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
-      ObstacleFootprint.scale: 0.5
+      ObstacleFootprint.scale: 3.0
       PathAlign.scale: 20.0
       PathAlign.forward_point_distance: 0.1
-      GoalAlign.scale: 5.0
+      GoalAlign.scale: 15.0
       GoalAlign.forward_point_distance: 0.1
-      PathDist.scale: 15.0
-      GoalDist.scale: 5.0
-      RotateToGoal.scale: 10.0
+      PathDist.scale: 10.0
+      GoalDist.scale: 15.0
+      RotateToGoal.scale: 20.0
       RotateToGoal.slowing_factor: 5.0
       RotateToGoal.lookahead_time: -1.0
 
@@ -192,7 +192,7 @@ local_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 2.0
-        inflation_radius: 0.21   # 0.2->0.3: robot giữ berth xa vật cản thêm ~10cm (né nới hơn)
+        inflation_radius: 0.19  # 0.2->0.3: robot giữ berth xa vật cản thêm ~10cm (né nới hơn)
 
 global_costmap:
   global_costmap:
